@@ -10,11 +10,9 @@ import java.util.Map;
 @RestController
 public class SampleController {
 
-    @RequestMapping("/hello")
-    public Map<String, String> hello(HttpServletRequest request){
-        Map<String, String> result = new HashMap<>();
-        result.put("src", request.getRemoteAddr());
-        result.put("dest", request.getServerName());
+    @RequestMapping("/")
+    public String hello(HttpServletRequest request){
+        String result = "src: "+request.getRemoteAddr()+" / dest: "+request.getServerName()+"\n";
         return result;
     }
 }
