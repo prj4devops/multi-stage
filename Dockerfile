@@ -2,6 +2,7 @@ FROM openjdk:8 AS build
 LABEL description="Multi-stage build environment"
 LABEL type="tmp"
 WORKDIR /tmp
+COPY dummy .
 RUN git clone https://github.com/prj4devops/multi-stage.git && \
 chmod 755 ./multi-stage/mvnw && \
 ./multi-stage/mvnw clean package
