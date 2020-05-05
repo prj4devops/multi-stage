@@ -1,5 +1,6 @@
 FROM openjdk:8 AS build
 LABEL description="Multi-stage build sample app"
+LABEL type="tmp"
 WORKDIR /tmp
 RUN git clone https://github.com/prj4devops/multi-stage.git && \
 chmod 755 ./multi-stage/mvnw && \
