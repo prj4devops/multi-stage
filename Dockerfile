@@ -1,6 +1,5 @@
 FROM openjdk:8 AS build
 LABEL description="Multi-stage build environment"
-
 WORKDIR /tmp
 ADD http://worldtimeapi.org/api/ip/asia/seoul created.json
 RUN git clone https://github.com/prj4devops/multi-stage.git
