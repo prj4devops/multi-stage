@@ -16,7 +16,6 @@
 
     <properties>
         <java.version>1.8</java.version>
-        <dir>${project.basedir}/step1</dir>            
     </properties>
 
     <dependencies>
@@ -44,9 +43,6 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
-                    <outputDirectory>${dir}</outputDirectory>
-                </configuration>
             </plugin>
         </plugins>
     </build>
