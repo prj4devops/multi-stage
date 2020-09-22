@@ -8,7 +8,7 @@ RUN ./mvnw clean package
 
 FROM gcr.io/distroless/java:8
 LABEL description="Multi-stage sample application"
-COPY --from=build /tmp/multi-stage/step1/app-in-step1.jar /opt/app-in-step2.jar
+COPY --from=build /tmp/multi-stage/target/app-in-step1.jar /opt/app-in-step2.jar
 EXPOSE 18080
 WORKDIR /opt
 ENTRYPOINT [ "java", "-jar", "app-in-step2.jar" ]
